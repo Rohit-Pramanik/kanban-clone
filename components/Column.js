@@ -8,7 +8,12 @@ import { Draggable, Droppable } from "react-beautiful-dnd";
 
 const Column = ({ list, column }) => {
   return (
-    <Droppable droppableId={column.id}>
+    <Droppable
+      droppableId={column.id}
+      isDropDisabled={false}
+      isCombineEnabled={false}
+      ignoreContainerClipping={false}
+    >
       {(droppableProvided, droppableSnapshot) => (
         <div
           className="w-[32%] p-4 rounded-[1rem] bg-[#F5F5F5]"
